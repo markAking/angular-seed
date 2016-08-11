@@ -1,1 +1,37 @@
-<p>This is the partial for view 1.</p>
+<div class="content">
+
+  <form ng-submit="submit(guest)"  ng-show="!facts">
+    <div>
+        <label>Name:</label>
+        <input type="text" ng-model="guest.name" placeholder="Name" required/>
+    </div>
+    <div>
+        <label>Date of Birth:</label>
+        <input type="date" ng-model="guest.dob" required/>
+    </div>
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+  </form>
+
+  <div class="funfact" ng-show="facts">
+    <h1>{{guest.name}}</h1>
+    <h2>Age: {{guest.age}}  Birthday: {{guest.dob | date:'MM/dd/yyyy'}}</h2>
+    <div class="innerwrapper">
+        <div>
+            <h3>Fun Fact #1</h3>
+            <p>{{guest.fact_date}}</p>
+        </div>
+        <div>
+            <h3>Fun Fact #2</h3>
+            <p>{{guest.fact_math}}</p>
+        </div>
+        <div>
+            <h3>Fun Fact #3</h3>
+            <p>{{guest.fact_trivia}}</p>
+        </div>
+    </div>
+    <button ng-click="reset()">Try Again</button>
+  </div>
+  
+</div>

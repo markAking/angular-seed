@@ -1,30 +1,68 @@
 /* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+body{
+  font-family: 'Oswald', sans-serif;
+}
+form div{
+  text-align: center;
+  margin: 20px 0;
+}
+label{
+  display: block;
+  font-size: 18px;
+}
+input[type="text"],
+input[type="date"]{
+  width: 300px;
+  text-align: center;
+}
+button,
+input[type="submit"]{
+  padding: 5px 50px;
+  border: none;
+  border-radius: 2px;
+  background: #00afec;
+}
+h1,
+h2{
+  display: block;
+  margin-top: 0;
+}
+h3{
+  color: #0089c6;
+}
+button{
+  margin-top:20px;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("http://thecatapi.com/api/images/get?format=src&type=jpg");
+  background-size: cover;
+}
+.content{
+  width: 50%;
+  padding: 20px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+  position: relative;
+}
+.funfact{
+  text-align: center;
+}
+.innerwrapper{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.innerwrapper div{
+  width: 30%;
+  background: #FFF;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #666;
 }
 
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}
